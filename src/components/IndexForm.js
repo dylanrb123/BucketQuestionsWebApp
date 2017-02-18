@@ -2,6 +2,9 @@
  * Created by Dylan on 2/18/2017.
  */
 import React, { Component } from 'react'
+import TextField from 'material-ui/TextField'
+import RaisedButton from 'material-ui/RaisedButton';
+
 import './App.css'
 
 class IndexForm extends Component {
@@ -25,12 +28,11 @@ class IndexForm extends Component {
   render() {
     return (
       <div className="indexForm">
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Enter your bucket name:
-            <input type="text" value={this.state.bucketName} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit"/>
+        <form onSubmit={this.handleSubmit} className="IndexForm">
+          <TextField value={this.state.bucketName} onChange={this.handleChange}
+            floatingLabelText="Enter your bucket name"
+          /><br/>
+          <RaisedButton label={"Go to bucket: " + this.state.bucketName} fullWidth={true} primary={true} onTouchTap={this.handleSubmit}/>
         </form>
       </div>
     )
