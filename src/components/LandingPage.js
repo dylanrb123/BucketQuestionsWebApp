@@ -12,8 +12,8 @@ class LandingPage extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={bucket} className="App-logo"/>
-          <img src={question} className="App-logo" style={{paddingLeft: '10px'}}/>
+          <img src={bucket} className="App-logo" alt=""/>
+          <img src={question} className="App-logo" style={{paddingLeft: '10px'}} alt=""/>
         </div>
         <IndexForm/>
       </div>
